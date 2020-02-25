@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    tools:context="zero.general.gamblerdice.GamblerFragment">
+    <TextView
+        android:id="@+id/gam_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:hint="" />
+
+    <NumberPicker
+        android:id="@+id/gam_dice_count"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="110dp"
+        android:layout_alignBaseline="@+id/gam_dice_type"
+        android:layout_alignBottom="@+id/gam_dice_type"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <NumberPicker
+        android:id="@+id/gam_dice_type"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_below="@+id/gam_result"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/chart"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:ems="50"
+        android:inputType="textMultiLine"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/text_num_dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Num of Dice"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignBaseline="@+id/gam_dice_count"
+        android:layout_alignBottom="@+id/gam_dice_count"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/text_type_dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of Dice"
+        android:layout_alignBaseline="@+id/text_num_dice"
+        android:layout_alignBottom="@+id/text_num_dice"
+        android:layout_toStartOf="@+id/gam_dice_type" />
+
+    <Button
+        android:id="@+id/gam_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        android:layout_above="@+id/chart"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
